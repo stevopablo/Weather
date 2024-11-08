@@ -8,8 +8,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Scanner;
 
 public class Functions {
+
+
     public static String getData(String urlString) {
         StringBuilder content = new StringBuilder();
         try {
@@ -45,4 +48,12 @@ public class Functions {
         int humidity = main.get("humidity").getAsInt();
         System.out.println("Humidity = " + humidity + "%");
     }
+
+    public static void greeting(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Qual seu nome: ");
+        String name = scanner.nextLine();
+        System.out.println("Bem-vindo " + name + " !");
+    }
+
 }

@@ -20,15 +20,13 @@ public class ClimaApplication {
 		String urlBase = Services.URL_BASE;
 		String city;
 		String apiKey = Services.API_KEY;
-		String name;
 
-
-		System.out.println("Qual seu nome: ");
-		name = input.nextLine();
-		System.out.println("Oi " + name + "!");
+//		String name;
+//		System.out.println("Qual seu nome: ");
+//		name = input.nextLine();
+		Functions.greeting();
 
 		boolean continuar = true;
-
 		while(continuar){
 			try {
 			System.out.println("Digite 0 se quiser sair: ");
