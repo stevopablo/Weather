@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.io.ObjectInputFilter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
@@ -18,12 +19,9 @@ public class ClimaApplication {
 
 		Scanner input = new Scanner(System.in);
 		String urlBase = Services.URL_BASE;
-		String city;
 		String apiKey = Services.API_KEY;
+		String city;
 
-//		String name;
-//		System.out.println("Qual seu nome: ");
-//		name = input.nextLine();
 		Functions.greeting();
 
 		boolean continuar = true;
@@ -34,6 +32,7 @@ public class ClimaApplication {
 			city = input.nextLine();
 
 			if (city.equals("0")){
+				System.out.println("tchau...");
 				continuar = false;
 
 			}else{
